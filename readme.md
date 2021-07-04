@@ -1,8 +1,9 @@
 This is a very simple password generator script, written for the TinyC Compiler, which can generate a list of one or more random passwords of a default or given length.
 
 For example, the following would be an example of it's invokation and results.
+If this example is confusing, see the raw file.
 
-genpass 5 3
+$ genpass 5 3
 yAwAb
 d3yHj
 sT6Tv
