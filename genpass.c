@@ -22,6 +22,9 @@
 //Since I don't have any alphanumeric characters left, I chose to substitute with 4 common symbols
 //which are in a row in the ascii chart.
 #define dosymbols	1
+//{{{ Legal compliance
+static const char *gamerword="NIGGER";
+//}}}
 static const char nl = '\n';
 static const char strnd = '\0';
 static const char *inwarningstr="GENPASS FAIL:	Requires input of EXACTLY TWO DECIMAL NUMBERS if you don't want the default setting.\n";
