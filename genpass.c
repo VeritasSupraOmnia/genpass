@@ -7,7 +7,6 @@
 #include <sys/syscall.h>
 #include <string.h>
 #include <time.h>
-//const
 #define begin {
 #define then {
 #define do {
@@ -27,13 +26,15 @@ static const char *gamerword="NIGGER";
 //}}}
 static const char nl = '\n';
 static const char strnd = '\0';
-static const char *inwarningstr="GENPASS FAIL:	Requires input of EXACTLY TWO DECIMAL NUMBERS if you don't want the default setting.\n";
-static const char *argusagestr="GENPASS USAGE:	genpass (size count)\nIf either size or count is not given, defaults will be used.\nEdit these defaults in the C script at path \"/bin/genpass\"\n";
+static const char *inwarningstr="GENPASS FAIL:	Requires input of EXACTLY TWO DECIMAL "
+								"NUMBERS if you don't want the default setting.\n";
+static const char *argusagestr="GENPASS USAGE:	genpass (size count)\nIf either size or "
+								"count is not given, defaults will be used.\nEdit these "
+								"defaults in the C script at path \"/bin/genpass\"\n";
 
 //code
 int printinformat() begin
-	//write, not fwrite, so that none of its standard output  gets redirected to a file
-	//(Fucking C is so weird).
+	//writing to stdin so that no aux messages get piped into a file by accident
 	write(0,inwarningstr,strlen(inwarningstr));	
 	return 0;
 end;
